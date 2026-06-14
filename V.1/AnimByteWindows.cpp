@@ -4,7 +4,6 @@
 #include <iostream>
 #include <vector>
 #include <stdlib.h>
-#include <windows.h>  // Changed from <unistd.h>
 
 class AnimByte{
 public:
@@ -77,15 +76,14 @@ private:
     }
 
     int render(const std::string &frame){
-        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+        // Simple cross-platform clear screen using standard C++
+        #ifdef _WIN32
+            system("cls");
+        #else
+            system("clear");
+        #endif
         
-        // Move cursor to home position (0,0)
-        COORD cursorPosition = {0, 0};
-        SetConsoleCursorPosition(hConsole, cursorPosition);
-        
-        // Write the frame
-        DWORD written;
-        WriteConsole(hConsole, frame.c_str(), frame.size(), &written, NULL);
+        std::cout << frame;
         return 0;
     }
 };
