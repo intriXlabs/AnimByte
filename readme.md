@@ -6,6 +6,7 @@
 
 **1-byte character rendering engine for terminal animation.**
 Minimal API. Flat buffer. High-speed output.
+website: https://animbyte.vercel.app/
 
 ---
 
