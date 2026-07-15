@@ -1,4 +1,5 @@
-#include "AnimByte.cpp"
+#include "../AnimByte.cpp"
+#include <iostream>
 #include <cmath>
 #include <ctime>
 #include <vector>
