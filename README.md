@@ -42,6 +42,7 @@ AnimByte is a C++ engine for terminal-based rendering using **pure ASCII charact
 
 ### Initialise
 
+
 ```cpp
 int Initialise(int width, int height);
 ```
