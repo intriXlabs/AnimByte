@@ -1,4 +1,4 @@
-#include "../AnimByte.cpp"
+#include "../../Include/LinuxVersion/AnimByte.cpp"
 #include <iostream>
 #include <cmath>
 #include <ctime>
